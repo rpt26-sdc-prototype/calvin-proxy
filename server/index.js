@@ -12,6 +12,16 @@ app.get('/:id', (req, res) => {
   res.sendFile(path.resolve('public/index.html'));
 });
 
+app.get('/images/:id', async (req, res) => {
+  let {data} = await axios.get(`http://localhost:4012/images/${req.params.id}`);
+  res.send(data);
+});
+
+app.get('/api/product/:id/', async (req, res) => {
+  let {data} = await axios.get(`http://localhost:4032/api/product/${req.params.id}`);
+  res.send(data);
+});
+
 app.get('/morelikethis/:id', async (req, res) => {
   await axios.get(`http://localhost:4022/morelikethis/${req.params.id}`)
     .then(response => {
@@ -23,14 +33,8 @@ app.get('/morelikethis/:id', async (req, res) => {
     });
 });
 
-app.get('/images/:page', async (req, res) => {
-  const { data } = await axios.get(`http://localhost:4012/images/${req.params.page}`);
-  res.send(data);
-});
-
 app.get('/reviews/:id', async (req, res) => {
-  var {data} = await axios.get(`http://localhost:4052/reviews/${req.params.id}`);
-  console.log(data);
+  let {data} = await axios.get(`http://localhost:4052/reviews/${req.params.id}`);
   res.send(data);
 });
 

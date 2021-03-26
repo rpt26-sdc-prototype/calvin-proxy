@@ -23,7 +23,7 @@ app.get('/images/:id', async (req, res) => {
       res.send(response.data);
     })
     .catch(err => {
-      console.log('Error with GET request to my service', err);
+      console.log('Error with GET request to image service', err);
       res.status(404).end();
     });
 });
@@ -37,7 +37,7 @@ app.get('/api/product/:id/', async (req, res) => {
       res.send(response.data);
     })
     .catch(err => {
-      console.log('Error with GET request to my service', err);
+      console.log('Error with GET request to product service', err);
       res.status(404).end();
     });
 });
@@ -63,7 +63,7 @@ app.get('/reviews/:id', async (req, res) => {
       res.send(response.data);
     })
     .catch(err => {
-      console.log('Error with GET request to my service', err);
+      console.log('Error with GET request to review service', err);
       res.status(404).end();
     });
 });

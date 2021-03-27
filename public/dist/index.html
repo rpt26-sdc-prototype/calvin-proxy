@@ -1,31 +1,26 @@
 <!DOCTYPE html>
-<html>
 
+<html>
   <head>
     <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
     <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/styled-components/4.4.1/styled-components.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="main.css"/>
   </head>
 
   <body>
-    <header id='header'>This is the header</header>
-    </br>
-    </br>
+    <div id='container' style='min-height: 100%; position: relative;'>
 
-    <h3>Service Container</h3>
+      <header id='header'></header>
 
-    <div id='services'>
       <div id='image-gallery'></div>
       <div id='metadataApp'></div>
       <div id='moreLikeThis'></div>
       <div id='reviewApp'></div>
+
+      <footer id='footer'></footer>
     </div>
-    </br>
-    </br>
 
-    <footer id='footer'>This is the footer</footer>
-
+    <script src='http://localhost:3000/bundle.js'></script>
     <script src='http://localhost:4012/index_bundle.js'></script>
     <script src='http://localhost:4032/index.js'></script>
     <script src='http://localhost:4022/bundle.js'></script>

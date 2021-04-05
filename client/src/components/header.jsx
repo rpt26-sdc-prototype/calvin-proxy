@@ -1,5 +1,5 @@
-import {StyledHeader, HeaderContent, HeaderLogo, HeaderLogoHolder, HeaderA, HeaderImg, HeaderNavContainer, HeaderNavMenu, GlobalAction, GlobalActionMenu, InstallSteamButton, InstallSteamButtonContent, LoginAction, LanguageAction} from '../styledComponents/styled.header.jsx'
-;
+import {StyledHeader, HeaderContent, HeaderLogo, HeaderLogoHolder, HeaderA, HeaderImg, HeaderNavContainer, HeaderNavMenu, GlobalAction, GlobalActionMenu, InstallSteamButton, InstallSteamButtonContent, LoginAction, LanguageAction} from '../styledComponents/styled.header.jsx';
+
 const Header = () => {
 
   return (

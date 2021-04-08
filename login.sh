@@ -1,0 +1,1 @@
+ssh -i "/Users/cal/Desktop/HackReactor/Sprints/FEC/calvin-proxy/proxy.pem" ubuntu@ec2-54-219-241-15.us-west-1.compute.amazonaws.com

@@ -32,7 +32,7 @@ app.get('/images/:id', async (req, res) => {
 // GET product information
 
 app.get('/api/product/:id/', async (req, res) => {
-  await axios.get(`http://localhost:4032/api/product/${req.params.id}`)
+  await axios.get(`http://3.227.255.185:4032/api/product/${req.params.id}`)
     .then(response => {
       res.send(response.data);
     })

@@ -9,6 +9,7 @@
   },
   "scripts": {
     "build": "webpack --watch",
+    "webpack": "webpack",
     "dev": "nodemon server/index.js",
     "start": "node server/index.js",
     "newrelic": "node -r newrelic ./server/index.js",

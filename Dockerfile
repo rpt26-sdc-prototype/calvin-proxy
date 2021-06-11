@@ -8,6 +8,7 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 3000
+# EXPOSE 3000
+RUN npm run webpack
 
 CMD ["npm", "start"]

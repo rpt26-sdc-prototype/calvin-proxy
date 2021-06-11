@@ -1,11 +1,13 @@
 ## MAC files ##
 .DS_Store
 newrelic.js
+login.sh
 
 ## NPM ##
 npm
 npm-debug.log
 node_modules/
+.pem
 
 pids
 *.pid

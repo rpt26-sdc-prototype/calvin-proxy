@@ -11,4 +11,4 @@ COPY . .
 # EXPOSE 3000
 RUN npm run webpack
 
-CMD ["npm", "run", "newrelic"]
+CMD ["npm", "start"]

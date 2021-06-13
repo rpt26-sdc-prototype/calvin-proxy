@@ -18,15 +18,34 @@ app.get('/:id', (req, res) => {
 
 // GET images
 
+// app.get('/images/:id', async (req, res) => {
+//   await axios.get(`http://localhost:4012/images/${req.params.id}`)
+//     .then(response => {
+//       res.send(response.data);
+//     })
+//     .catch(err => {
+//       console.log('Error with GET request to image service', err);
+//       res.status(404).end();
+//     });
+// });
+app.get('/photoBundle/index_bundle.js', async (req, res) => {
+  try {
+    const { data } = await axios('http://18.118.17.38/index_bundle.js');
+          //console.log(data);
+    //var {data} = await axios.get('https://steam-fec.s3.amazonaws.com/bundle/index_bundle.js')
+    res.send(data)
+  } catch (err) {
+    res.status(500).send(err)
+  }
+})
+
 app.get('/images/:id', async (req, res) => {
-  await axios.get(`http://localhost:4012/images/${req.params.id}`)
-    .then(response => {
-      res.send(response.data);
-    })
-    .catch(err => {
-      console.log('Error with GET request to image service', err);
-      res.status(404).end();
-    });
+  try {
+    const { data } = await axios(`http://18.118.17.38/images/${req.params.id}`);
+    res.send(data);
+  } catch (err) {
+    res.status(500).send(err)
+  }
 });
 
 
@@ -46,7 +65,7 @@ app.get('/api/product/:id/', async (req, res) => {
 // GET similar games
 
 app.get('/morelikethis/:id', async (req, res) => {
-  await axios.get(`http://localhost:4022/morelikethis/${req.params.id}`)
+  await axios.get(`http://3.130.170.99:4022/morelikethis/${req.params.id}`)
     .then(response => {
       res.send(response.data);
     })
@@ -56,18 +75,45 @@ app.get('/morelikethis/:id', async (req, res) => {
     });
 });
 
+// app.get('/moreLikeThisBundle/bundle.js', async (req, res) => {
+//   try {
+//     var {data} = await axios.get('http://3.130.170.99:4022/bundle.js')
+//     res.send(data)
+//   } catch (err) {
+//     res.status(500).send(err)
+//   }
+// })
+
+// app.get('/morelikethis/:id', async (req, res) => {
+//   await axios(`http://3.130.170.99:4022/morelikethis/${req.params.id}`)
+//     .then(response => {
+//       res.send(response.data);
+//     })
+//     .catch(err => {
+//       console.log('Error with GET request to server', err);
+//       res.status(404).end();
+//     });
+// });
+
 // GET reviews
 
 app.get('/reviews/:id', async (req, res) => {
-  await axios.get(`http://localhost:4052/reviews/${req.params.id}`)
-    .then(response => {
-      res.send(response.data);
-    })
-    .catch(err => {
-      console.log('Error with GET request to review service', err);
-      res.status(404).end();
-    });
-});
+  try {
+    var {data} = await axios(`https://www.steammop.app/reviews/${req.params.id}`);
+    res.send(data)
+  } catch (err) {
+    res.status(500).send(err)
+  }
+})
+
+app.get('/reviewBundle/bundle.js', async (req, res) => {
+  try {
+    var {data} = await axios('https://steammop.app/bundle.js')
+    res.send(data)
+  } catch (err) {
+    res.status(500).send(err)
+  }
+})
 
 
 app.listen(port, () => {

@@ -65,7 +65,8 @@ app.get('/api/product/:id/', async (req, res) => {
 // GET similar games
 
 app.get('/morelikethis/:id', async (req, res) => {
-  await axios.get(`http://3.130.170.99:4022/morelikethis/${req.params.id}`)
+  // await axios.get(`http://3.130.170.99:4022/morelikethis/${req.params.id}`)
+  await axios.get(`http://3.12.137.108/morelikethis/${req.params.id}`)
     .then(response => {
       res.send(response.data);
     })
